@@ -146,3 +146,35 @@ namespace Pract1wpf
 
     }
 }
+//XAML файлы(я не знаю как отдельно их добавить в гитхаб):
+<Window x:Class="Pract1wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="512" Width="599">
+
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="111*" />
+            <RowDefinition Height="111*" />
+            <RowDefinition Height="111*" />
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btn1" Grid.Row="0" Grid.Column="0" Content="" Click="ButtonClick" IsEnabled="False"/>
+        <Button x:Name="btn2" Grid.Row="0" Grid.Column="1" Content="" Click="ButtonClick" IsEnabled="False"/>
+        <Button x:Name="btn3" Grid.Row="0" Grid.Column="2" Content="" Click="ButtonClick" IsEnabled="False"/>
+        <Button x:Name="btn4" Grid.Column="0" Content="" Click="ButtonClick" IsEnabled="False" Margin="0,111,0,111" Grid.RowSpan="3"/>
+        <Button x:Name="btn5" Grid.Column="1" Content="" Click="ButtonClick" IsEnabled="False" Margin="0,111,0,111" Grid.RowSpan="3"/>
+        <Button x:Name="btn6" Grid.Column="2" Content="" Click="ButtonClick" IsEnabled="False" Margin="0,111,0,111" Grid.RowSpan="3"/>
+        <Button x:Name="btn7" Grid.Row="2" Grid.Column="0" Content="" Click="ButtonClick" IsEnabled="False"/>
+        <Button x:Name="btn8" Grid.Row="2" Grid.Column="1" Content="" Click="ButtonClick" IsEnabled="False"/>
+        <Button x:Name="btn9" Grid.Row="2" Grid.Column="2" Content="" Click="ButtonClick" IsEnabled="False"/>
+
+        <Button x:Name="btnRestart" Grid.Row="2" Grid.ColumnSpan="3" Content="Начать заново" Click="RestartClick" IsEnabled="True" Margin="0,152,0,0" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
