@@ -1,0 +1,35 @@
+﻿<Window x:Class="PraktosikCSharp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PraktosikCSharp3"
+        mc:Ignorable="d"
+        Title="Listening History" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Name="historyPanel" Grid.Row="0" VerticalAlignment="Top"/>
+
+        <TextBlock Grid.Row="1" Text="Now Playing: Track Name" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <MediaElement x:Name="mediaElement" Grid.Row="2" LoadedBehavior="Manual" UnloadedBehavior="Manual" />
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Play" Margin="5"/>
+            <Button Content="Pause" Margin="5"/>
+            <Button Content="Stop" Margin="5"/>
+        </StackPanel>
+        <Label Grid.Row="0" Content="Enter your name:" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <TextBox x:Name="nameTextBox" Grid.Row="1" Margin="10" HorizontalAlignment="Center"/>
+
+        <Button Grid.Row="2" Content="Submit" Margin="10" HorizontalAlignment="Center"/>
+        <Slider x:Name="sliderPosition" Minimum="0" Maximum="100" Value="0" Width="200"  TickFrequency="5" IsSnapToTickEnabled="True" Margin="50,184,50,10" Grid.Row="2"/>
+        <Slider x:Name="sliderVolume" Orientation="Vertical" Minimum="0" Maximum="100" Value="50" Height="50" TickFrequency="10" Margin="10,43,-10,103" Grid.Row="2"/>
+    </Grid>
+</Window>
